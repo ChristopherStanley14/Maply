@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Maply</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script src="maply.js"></script>
+    <link rel="stylesheet" type="text/css" href="maply.css">
+
+</head>
+
+<body>
+
+    <div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <span class="nav navbar-brand" style="font-size: 20pt">Maply</span>
+                </div>
+                <ul class="nav navbar-nav">
+
+                </ul>
+                <div class="btn-group pull-right">
+                    <div class="dropdown pull-right">
+
+
+
+
+
+
+                        <button style="height: 35pt; width: 35pt" class="glyphicon glyphicon-plus dropdown-toggle pull-right" type="button" data-toggle="dropdown"></button>
+                        <ul style="width: 200px" class="dropdown-menu">
+                            <li>
+                                <label>Enter Location <input type="text" id="postalCode" placeholder="Postal Code" /></label>
+                                <button type="button" id="buttonLookUpZip">Lookup</button>
+                            </li>
+                    </div>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="container">
+        <div class="row" id="cards"> 
+         </div>
+
+
+        <div id="div">
+            <div id="map" class="col-xs-10 col-sm-10 col-md-3 col-lg-3 col-xl-3" style="background-size: contain; height: 400pt; width: 700pt; border-radius: 10pt; margin: 30pt">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB71s2E_JrpnOOE12YAPxMe5PAqLPaWYrA&callback=initMap" async
+        defer></script>
+
+</body>
+
+</html>
