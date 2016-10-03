@@ -29,7 +29,7 @@ function lookupLatLong(city, state, postalCode) {
 function lookupZip() {
     var postalCode = $("#postalCode").val();
     lookupLatLong("", "", postalCode);
-}
+};
 
 
 
@@ -44,8 +44,14 @@ function lookupLatLong_Complete(result) {
 
     longName1 = result.address_components[1].long_name;
     shortName1 = result.address_components[3].short_name;
+    var fullName = longName1 + ", " + shortName1;
     $("#div").fadeIn("fast", "linear");
     $("#div").append(initMap);
+    $("#name").html(fullName);
+
+
+
+    
 
 
 
@@ -56,8 +62,8 @@ function lookupLatLong_Complete(result) {
 $(function () {
     $("#div").hide();
     $("#buttonLookUpZip").on("click", lookupZip);
-    
-    
+
+
 
 
 
@@ -79,13 +85,10 @@ function initMap(latitude, longitude) {
 
     });
 
-    
-   
-
-}
 
 
 
 
 
+};
 
